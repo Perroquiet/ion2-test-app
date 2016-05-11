@@ -1,0 +1,14 @@
+<ion-navbar *navbar>
+  <ion-title>Tab 1</ion-title>
+</ion-navbar>
+
+<ion-content padding class="page1">
+  <h2>Welcome to Ionic!</h2>
+  <div class="section-padding">
+		<button [disabled]="buttonBusy" (click)="getData()"><i *ngIf="buttonBusy" class="fa fa-circle-o-notch fa-spin icon-mg-r"> </i> Get JSON Data</button>
+    <button (click)="postData()">POST Data</button>
+		<div><h2>Data:</h2>{{jsonData | json}}</div>
+
+    <div><h2>Errors:</h2><pre>{{errMessage | json}}</pre></div>
+	</div>
+</ion-content>
